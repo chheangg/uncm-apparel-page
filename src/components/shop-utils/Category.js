@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import '../styles/Category.scss';
+import '../styles/category.scss';
 import Product from './Product';
 
 const Category = ({type, products}) => {

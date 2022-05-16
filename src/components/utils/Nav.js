@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
+import logoImg from '../assets/uncm-logo.png';
 import cartImg from '../assets/cart-outline.svg';
 import searchImg from '../assets/magnify.svg';
 import accImg from '../assets/account-outline.svg';
+import '../styles/nav.scss';
 
 const Nav = () => {
   return (
@@ -10,7 +12,7 @@ const Nav = () => {
         <Link to='/about-us'>About Us</Link>
       </div>
       <div className='mid-container'>
-        <Link to='/'>LOGO HERE</Link>
+        <Link to='/'><img src={logoImg} alt='logo'></img></Link>
       </div>
       <div className='right-container'>
         <ul>

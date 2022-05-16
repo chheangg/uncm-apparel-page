@@ -1,5 +1,5 @@
 import defaultImg from '../assets/shirt-default.jpg';
-import '../styles/Product.scss';
+import '../styles/product.scss';
 
 const Product = ({info}) => {
   return (
