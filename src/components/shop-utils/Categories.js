@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
-
-const Layout = ({children}) => {
-  return (
+const Categories = () => {
+  return(
     <div>
-      {children}
+      Categories
       <Outlet />
     </div>
+
   )
 }
 
-export default Layout;
+export default Categories;
