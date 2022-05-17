@@ -6,7 +6,7 @@ import Main from "./components/Main";
 import Categories from "./components/shop-utils/Categories";
 import Category from "./components/shop-utils/Category";
 import './components/styles/main.scss';
-
+import defaultImg from './components/assets/shirt-default.jpg'
 const uncmList = [
   {
     name: 'simple shirt',
@@ -30,13 +30,40 @@ const uncmList = [
   },
 ]
 
+const ordered = [
+  {
+    name: 'simple shirt',
+    price: 12,
+    quantity: '2',
+    img: defaultImg,
+  },
+  {
+    name: 'simple pants',
+    price: 12,
+    quantity: '3',
+    img: defaultImg,
+  },
+  {
+    name: 'Air Menlay One',
+    price: 12,
+    quantity: '1',
+    img: defaultImg,
+  },
+  {
+    name: 'menlay\'s shirt',
+    price: 12,
+    quantity: '2',
+    img: defaultImg,
+  },
+]
 const App = () => {
-  const [products, setProducts] = useState(uncmList)
+  const [products, setProducts] = useState(uncmList);
+  const [carts, setCarts] = useState(ordered)
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Layout />}>
+        <Route path='/' element={<Layout carts={carts}/>}>
           <Route index element={<Main />} />
           <Route path='category' element={<Categories />}>
             <Route path='featured' element={<Category type='featured' products={products} />} />

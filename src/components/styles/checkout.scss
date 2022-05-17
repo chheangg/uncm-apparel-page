@@ -1,0 +1,18 @@
+.checkout-bar-container {
+  position: fixed;
+  max-height: 100vh;
+  right: 0;
+  top: 0;
+  background-color: #f3f4f6;
+  transition: 300ms ease-out;
+  transform: translateX(100%);
+
+  .checkout-container {
+    overflow-y: auto;
+  }
+}
+
+
+.checkout-animate {
+  transform: translateX(0);
+}

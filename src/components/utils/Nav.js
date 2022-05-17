@@ -5,7 +5,7 @@ import searchImg from '../assets/magnify.svg';
 import accImg from '../assets/account-outline.svg';
 import '../styles/nav.scss';
 
-const Nav = ({carts}) => {
+const Nav = ({carts, utils}) => {
   return (
     <nav className='nav-container'>
       <div className='left-container'>
@@ -19,7 +19,7 @@ const Nav = ({carts}) => {
           <li><Link to='/category/featured'>SHOP NOW</Link></li>
           <li><img className='icon' src={accImg} alt='account'></img></li>
           <li><img className='icon' src={searchImg} alt='search'></img></li>
-          <li><Cart carts={carts} /></li>
+          <li><Cart carts={carts} utils={utils.changeCartStatus} /></li>
         </ul>
       </div>
     </nav>
