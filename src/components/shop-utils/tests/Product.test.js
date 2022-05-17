@@ -8,6 +8,11 @@ const properties = {
   img: defaultImg,
 };
 
+const noImageProp = {
+  name: 'foo',
+  price: 19.99,
+}
+
 describe('Product Box Component', () => {
   it('#1 - Renders box component correct', () => {
     render(<Product info={properties}/>);
@@ -17,7 +22,7 @@ describe('Product Box Component', () => {
   });
 
   it('#2 - Renders box with rollback image', () => {
-    render(<Product info={properties}/>);
+    render(<Product info={noImageProp}/>);
     expect(screen.getByRole('img')).toBeInTheDocument();
     expect(screen.getByText('foo')).toBeInTheDocument();
     expect(screen.getByText('$ 19.99')).toBeInTheDocument();

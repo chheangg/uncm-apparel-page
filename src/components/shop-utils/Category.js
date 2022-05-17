@@ -1,14 +1,25 @@
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import '../styles/category.scss';
 import Product from './Product';
+import uniqid from 'uniqid';
 
 const Category = ({type, products}) => {
+  let filtered;
+  if (products) {
+    filtered = products.filter(product => product.type === type)
+      .map(product => {
+        return {
+          ...product,
+          key: uniqid(),
+        }
+      })
+  }
   return (
     <div className='product-wrapper'>
-      {type}
+      <h1 className='category-title'>
+        {type}
+      </h1>
       <div className='product-container'>
-      {products[0] ? products.map((product) => <Product info={product} />) : 'Nothing to see here' }
+        { filtered ? filtered.map((product) => <Product info={product} key={product.key} />) : 'Nothing to see here' }
       </div>
     </div>
   )

@@ -12,14 +12,22 @@ const uncmList = [
   {
     name: 'simple shirt',
     price: 12,
+    type: 'shirt',
+  },
+  {
+    name: 'menlay\'s shirt',
+    price: 12,
+    type: 'shirt',
   },
   {
     name: 'simple pants',
     price: 12,
+    type: 'pants',
   },
   {
-    name: 'simple sock',
+    name: 'Air Menlay One',
     price: 12,
+    type: 'shoes',
   },
 ]
 
@@ -36,7 +44,9 @@ const App = () => {
           }>
           <Route index element={<Main />} />
           <Route path='category' element={<Categories />}>
-            <Route path='shirts' element={<Category type='shirts' products={products} />} />
+            <Route path='shirts' element={<Category type='shirt' products={products} />} />
+            <Route path='pants' element={<Category type='pants' products={products} />} />
+            <Route path='shoes' element={<Category type='shoes' products={products} />} />
           </Route>
         </Route>
       </Routes>
