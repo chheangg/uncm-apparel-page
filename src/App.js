@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import 'normalize.css';
 import Layout from "./components/Layout";
 import Main from "./components/Main";
-import Nav from "./components/utils/Nav";
 import Categories from "./components/shop-utils/Categories";
 import Category from "./components/shop-utils/Category";
 import './components/styles/main.scss';
@@ -37,13 +36,10 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={
-            <Layout>
-              <Nav />
-            </Layout>
-          }>
+        <Route path='/' element={<Layout />}>
           <Route index element={<Main />} />
           <Route path='category' element={<Categories />}>
+            <Route path='featured' element={<Category type='featured' products={products} />} />
             <Route path='shirts' element={<Category type='shirt' products={products} />} />
             <Route path='pants' element={<Category type='pants' products={products} />} />
             <Route path='shoes' element={<Category type='shoes' products={products} />} />

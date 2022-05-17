@@ -6,7 +6,7 @@ const Categories = () => {
   return(
     <div className='main-cat-container'>
       <Sidebar />
-      <Outlet />
+      {<Outlet /> ? <Outlet /> : 'Nothing here'}
     </div>
 
   )
