@@ -1,21 +1,13 @@
-import { useState } from 'react';
 import { Outlet } from "react-router-dom";
 import Nav from "./utils/Nav";
 import Checkout from './utils/Checkout';
 
-const Layout = ({carts}) => {
-  const [ openCart, setOpenCart ] = useState(false);
-
-  const changeCartStatus = () => {
-    setOpenCart(true);
-    console.log('hi')
-  }
-
+const Layout = ({carts, utils, status}) => {
   return (
     <div>
-      <Nav carts={carts} utils={{changeCartStatus}}/>
+      <Nav carts={carts} utils={{changeCartStatus: utils.changeCartStatus}}/>
       <Outlet />
-      {openCart ? <Checkout carts={carts} /> : null}
+      {status ? <Checkout utils={utils.utils} carts={carts} /> : null}
     </div>
   )
 }

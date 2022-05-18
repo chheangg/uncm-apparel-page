@@ -2,7 +2,7 @@ import '../styles/category.scss';
 import Product from './Product';
 import uniqid from 'uniqid';
 
-const Category = ({type, products}) => {
+const Category = ({type, products, utils, carts}) => {
   let filtered;
   if (products) {
     filtered = products.filter(product => product.type === type)
@@ -19,7 +19,13 @@ const Category = ({type, products}) => {
         {type}
       </h1>
       <div className='product-container'>
-        { filtered ? filtered.map((product) => <Product info={product} key={product.key} />) : 'Nothing to see here' }
+        { filtered ? filtered.map((product) => {
+          const inCart = carts.filter(obj => obj.name === product.name);
+          if (inCart[0]) {
+            return <Product info={product} utils={utils} key={product.key} cartIcon={false} quantity={inCart[0].quantity} /> 
+          }
+          return <Product info={product} utils={utils} key={product.key} cartIcon={true} quantity={0} />;
+         }) : 'Nothing to see here' }
       </div>
     </div>
   )

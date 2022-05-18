@@ -46,7 +46,7 @@ const ordered = [
   {
     name: 'Air Menlay One',
     price: 12,
-    quantity: '1',
+    quantity: 1,
     img: defaultImg,
   },
   {
@@ -65,12 +65,49 @@ const App = () => {
     setOpenCart(true);
   }
 
-  const addToCart = (btn) => {
-    console.log(btn.currentTarget)
+  const addToCart = (product) => {
+    const inCart = carts.filter((obj) => obj.name === product.name);
+    if (inCart[0]) {
+      const newCart = carts.map((obj) => {
+        if (obj.name === inCart[0].name) {
+          const newObj = obj;
+          newObj.quantity = parseInt(newObj.quantity);
+          newObj.quantity += 1;
+          return newObj;
+        }
+        return obj;
+      });
+      setCarts(newCart);
+    } else {
+      const newOrder = {
+        name: product.name,
+        price: product.price,
+        quantity: 1,
+        img: product.img,
+      }
+      setCarts([...carts, newOrder]);
+    }
   }
 
-  const removeFromCart = (btn) => {
-    console.log(btn.currentTarget)
+  const removeFromCart = (product) => {
+    const inCart = carts.filter((obj) => obj.name === product.name);
+    if (inCart[0]) {
+      if (inCart[0].quantity === 1) {
+        const newCart = carts.filter((obj) => obj.name !== product.name)
+        setCarts(newCart)
+        return;
+      }
+      const newCart = carts.map((obj) => {
+        if (obj.name === inCart[0].name) {
+          const newObj = obj;
+          newObj.quantity = parseInt(newObj.quantity);
+          newObj.quantity -= 1;
+          return newObj;
+        }
+        return obj;
+      });
+      setCarts(newCart);
+    }
   }
 
   const utils = {
@@ -81,13 +118,13 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Layout carts={carts} status={openCart} utils={{changeCartStatus}}/>}>
+        <Route path='/' element={<Layout carts={carts} status={openCart} utils={{utils, changeCartStatus}}/>}>
           <Route index element={<Main />} />
           <Route path='category' element={<Categories />}>
-            <Route path='featured' element={<Category type='featured' products={products} utils={utils} />} />
-            <Route path='shirts' element={<Category type='shirt' products={products} utils={utils} />} />
-            <Route path='pants' element={<Category type='pants' products={products} utils={utils} />} />
-            <Route path='shoes' element={<Category type='shoes' products={products} utils={utils} />} />
+            <Route path='featured' element={<Category type='featured' carts={carts} products={products} utils={utils} />} />
+            <Route path='shirts' element={<Category type='shirt' carts={carts} products={products} utils={utils} />} />
+            <Route path='pants' element={<Category type='pants' carts={carts} products={products} utils={utils} />} />
+            <Route path='shoes' element={<Category type='shoes' carts={carts} products={products} utils={utils} />} />
           </Route>
         </Route>
       </Routes>

@@ -2,7 +2,7 @@ import CheckoutBox from "./CheckoutBox";
 import '../styles/checkout.scss';
 import { useEffect, useState } from 'react';
 
-const Checkout = ({carts}) => {
+const Checkout = ({carts, utils}) => {
   const [animate, setAnimate] = useState(false);
   useEffect(() => {
     setTimeout(() => {
@@ -13,7 +13,7 @@ const Checkout = ({carts}) => {
     <div className={animate ? 'checkout-bar-container checkout-animate' : 'checkout-bar-container'}>
       <h1>Shiz in your cart!</h1>
       <div className='checkout-container'>
-        {carts ? carts.map(item => <CheckoutBox info={item} />) : 'Bruh, order smth'}
+        {carts ? carts.map(item => <CheckoutBox info={item} utils={utils} />) : 'Bruh, order smth'}
       </div>
     </div>
   )
