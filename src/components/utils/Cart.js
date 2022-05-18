@@ -2,7 +2,6 @@ import cartImg from '../assets/cart-outline.svg';
 import '../styles/cart.scss';
 
 const Cart = ({carts, utils}) => {
-  console.log(utils)
   return (
     <button className='cart-btn' onClick={utils}>
       <img className='icon' src={cartImg} alt='checkout page'></img>

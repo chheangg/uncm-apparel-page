@@ -57,19 +57,37 @@ const ordered = [
   },
 ]
 const App = () => {
-  const [products, setProducts] = useState(uncmList);
+  const [products] = useState(uncmList);
   const [carts, setCarts] = useState(ordered)
+  const [ openCart, setOpenCart ] = useState(false);
+
+  const changeCartStatus = () => {
+    setOpenCart(true);
+  }
+
+  const addToCart = (btn) => {
+    console.log(btn.currentTarget)
+  }
+
+  const removeFromCart = (btn) => {
+    console.log(btn.currentTarget)
+  }
+
+  const utils = {
+    addToCart,
+    removeFromCart,
+  }
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Layout carts={carts}/>}>
+        <Route path='/' element={<Layout carts={carts} status={openCart} utils={{changeCartStatus}}/>}>
           <Route index element={<Main />} />
           <Route path='category' element={<Categories />}>
-            <Route path='featured' element={<Category type='featured' products={products} />} />
-            <Route path='shirts' element={<Category type='shirt' products={products} />} />
-            <Route path='pants' element={<Category type='pants' products={products} />} />
-            <Route path='shoes' element={<Category type='shoes' products={products} />} />
+            <Route path='featured' element={<Category type='featured' products={products} utils={utils} />} />
+            <Route path='shirts' element={<Category type='shirt' products={products} utils={utils} />} />
+            <Route path='pants' element={<Category type='pants' products={products} utils={utils} />} />
+            <Route path='shoes' element={<Category type='shoes' products={products} utils={utils} />} />
           </Route>
         </Route>
       </Routes>
