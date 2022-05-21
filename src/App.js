@@ -6,17 +6,22 @@ import Main from "./components/Main";
 import Categories from "./components/shop-utils/Categories";
 import Category from "./components/shop-utils/Category";
 import './components/styles/main.scss';
-import defaultImg from './components/assets/shirt-default.jpg'
+import defaultImg from './components/assets/tshirt-crew.svg'
 const uncmList = [
   {
     name: 'simple shirt',
     price: 12,
-    type: 'shirt',
+    type: 'shirts',
+  },
+  {
+    name: 'polo',
+    price: 12,
+    type: 'shirts',
   },
   {
     name: 'menlay\'s shirt',
     price: 12,
-    type: 'shirt',
+    type: 'shirts',
   },
   {
     name: 'simple pants',
@@ -62,6 +67,10 @@ const App = () => {
   const [ openCart, setOpenCart ] = useState(false);
 
   const changeCartStatus = () => {
+    if (openCart === true) {
+      setOpenCart(false);
+      return;
+    }
     setOpenCart(true);
   }
 
@@ -122,7 +131,7 @@ const App = () => {
           <Route index element={<Main />} />
           <Route path='category' element={<Categories />}>
             <Route path='featured' element={<Category type='featured' carts={carts} products={products} utils={utils} />} />
-            <Route path='shirts' element={<Category type='shirt' carts={carts} products={products} utils={utils} />} />
+            <Route path='shirts' element={<Category type='shirts' carts={carts} products={products} utils={utils} />} />
             <Route path='pants' element={<Category type='pants' carts={carts} products={products} utils={utils} />} />
             <Route path='shoes' element={<Category type='shoes' carts={carts} products={products} utils={utils} />} />
           </Route>

@@ -1,9 +1,10 @@
-import defaultImg from '../assets/shirt-default.jpg';
+import defaultImg from '../assets/tshirt-crew.svg';
 import { IncreaseProduct, DecreaseProduct } from './CartUtils';
+
 const CheckoutBox = ({info, utils}) => {
   return (
     <div className='checkout-box'>
-      {info.img ? <img src={info.img} alt='product'></img> : <img src={defaultImg} alt='product'></img>}
+      {info.img ? <img className='checkout-icon' src={info.img} alt='product'></img> : <img className='checkout-icon' src={defaultImg} alt='product'></img>}
       <h1 data-testid='checkoutItem' >{info.name}</h1>
       <div className='price'>$ {parseInt(info.price).toFixed(2)}</div>
       <div className='quantity-switch'>

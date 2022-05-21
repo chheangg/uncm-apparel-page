@@ -4,7 +4,7 @@ import minusImg from '../assets/minus.svg';
 
 const AddToCart = ({utils, info}) => {
   return (
-    <button className='utils-icon' data-testid='addToCart' onClick={() => {
+    <button className='utils-icon add-to-cart' data-testid='addToCart' onClick={() => {
       console.log(info);
       utils.addToCart(info);
     }}>

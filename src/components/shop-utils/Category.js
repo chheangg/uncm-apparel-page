@@ -16,7 +16,7 @@ const Category = ({type, products, utils, carts}) => {
   return (
     <div className='product-wrapper'>
       <h1 className='category-title'>
-        {type}
+        {type} <p>{filtered.length} products</p>
       </h1>
       <div className='product-container'>
         { filtered ? filtered.map((product) => {

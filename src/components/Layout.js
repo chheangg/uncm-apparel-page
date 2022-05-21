@@ -7,7 +7,7 @@ const Layout = ({carts, utils, status}) => {
     <div>
       <Nav carts={carts} utils={{changeCartStatus: utils.changeCartStatus}}/>
       <Outlet />
-      {status ? <Checkout utils={utils.utils} carts={carts} /> : null}
+      {status ? <Checkout utils={utils} carts={carts} /> : null}
     </div>
   )
 }

@@ -12,7 +12,7 @@ const Nav = ({carts, utils}) => {
         <Link to='/about-us'>ABOUT US</Link>
       </div>
       <div className='mid-container'>
-        <Link to='/'><img src={logoImg} alt='logo'></img></Link>
+        <Link to='/'><img className='logo' src={logoImg} alt='logo'></img></Link>
       </div>
       <div className='right-container'>
         <ul>
