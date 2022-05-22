@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/uncm-apparel-page/static/css/main.4775699e.css",
+    "main.js": "/uncm-apparel-page/static/js/main.de1c6eee.js",
+    "static/js/787.d6fe38e8.chunk.js": "/uncm-apparel-page/static/js/787.d6fe38e8.chunk.js",
+    "static/media/uncm-header-vid.mp4": "/uncm-apparel-page/static/media/uncm-header-vid.bc66e1cda23a379b07d5.mp4",
+    "static/media/uncm-logo.png": "/uncm-apparel-page/static/media/uncm-logo.958c5852a0c6c6922896.png",
+    "index.html": "/uncm-apparel-page/index.html",
+    "static/media/cart-plus.svg": "/uncm-apparel-page/static/media/cart-plus.3c5174867be077ffea857799425724d2.svg",
+    "static/media/cart-outline.svg": "/uncm-apparel-page/static/media/cart-outline.4a8eb25fce9df7e1ca0a322f5ffb062f.svg",
+    "static/media/tshirt-crew.svg": "/uncm-apparel-page/static/media/tshirt-crew.52f42e2fa3255780679988ffc4fbde80.svg",
+    "static/media/account-outline.svg": "/uncm-apparel-page/static/media/account-outline.89ef16a7c24873cbb82d48274f1dc093.svg",
+    "static/media/magnify.svg": "/uncm-apparel-page/static/media/magnify.bb8056749540827091cad74fff4e57f3.svg",
+    "static/media/close.svg": "/uncm-apparel-page/static/media/close.5cd3645cf868e38fd4b537249c2397f6.svg",
+    "static/media/menu.svg": "/uncm-apparel-page/static/media/menu.f00e2080025681cdfae3542d27c70e9f.svg",
+    "static/media/plus.svg": "/uncm-apparel-page/static/media/plus.f48bf0f7053189de17915ba0ff71eefd.svg",
+    "static/media/minus.svg": "/uncm-apparel-page/static/media/minus.686d0e9d4005d913b138af19533d99c6.svg",
+    "main.4775699e.css.map": "/uncm-apparel-page/static/css/main.4775699e.css.map",
+    "main.de1c6eee.js.map": "/uncm-apparel-page/static/js/main.de1c6eee.js.map",
+    "787.d6fe38e8.chunk.js.map": "/uncm-apparel-page/static/js/787.d6fe38e8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4775699e.css",
+    "static/js/main.de1c6eee.js"
+  ]
+}
