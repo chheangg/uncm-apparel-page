@@ -1,0 +1,51 @@
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 780px;
+
+  .video-container {
+    position: absolute;
+    width: 100vw;
+    overflow: hidden;
+    filter: brightness(45%);
+  }
+
+  video {
+    margin-top: -4px;
+  }
+
+  p {
+    color: white;
+    font-size: 6rem;
+    font-weight: 800;
+    z-index: 2;
+    margin: 0;
+    margin-bottom: 4rem;
+  }
+
+.btn-wrapper {
+  z-index: 2;
+  display: flex;
+  a {
+    z-index: 2;
+    font-size: 4ch;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    background-color: #6366f1;
+    margin-bottom: 20vh;
+    transition: 200ms ease-out;
+  }
+}
+
+a:hover {
+    transform: translateY(-0.5rem);
+    color: #6366f1;
+    background-color: white;
+  }
+
+}

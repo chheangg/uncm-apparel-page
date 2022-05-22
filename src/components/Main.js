@@ -1,7 +1,9 @@
+import Header from "./Header";
+
 const Main = () => {
   return (
-    <div>
-      Main!
+    <div className='main-container'>
+      <Header />
     </div>
   )
 }
