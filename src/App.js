@@ -14,6 +14,18 @@ const uncmList = [
     type: 'shirts',
   },
   {
+    name: 'air fock one',
+    price: 12,
+    type: 'shoes',
+    featured: true,
+  },
+  {
+    name: 'jersey pants',
+    price: 12,
+    type: 'pants',
+    featured: true,
+  },
+  {
     name: 'polo',
     price: 12,
     type: 'shirts',

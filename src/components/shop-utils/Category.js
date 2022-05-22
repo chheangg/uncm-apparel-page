@@ -5,13 +5,28 @@ import uniqid from 'uniqid';
 const Category = ({type, products, utils, carts}) => {
   let filtered;
   if (products) {
-    filtered = products.filter(product => product.type === type)
+    if (type !== 'featured') {
+      filtered = products.filter(product => product.type === type)
       .map(product => {
         return {
           ...product,
           key: uniqid(),
         }
       })
+    }
+    else {
+      filtered = products.filter(product => {
+        if (product.featured && product.featured === true) {
+          console.log(product)
+          return product
+        }
+      }).map(product => {
+        return {
+          ...product,
+          key: uniqid(),
+        }
+      })
+    }
   }
   return (
     <div className='product-wrapper'>

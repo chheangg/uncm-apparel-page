@@ -1,22 +1,153 @@
 .checkout-bar-container {
   position: fixed;
-  max-height: 100vh;
+  height: 100vh;
+  width: 25vw;
+  padding: 2rem;
   right: 0;
   top: 0;
   background-color: #f3f4f6;
   transition: 300ms ease-out;
   transform: translateX(100%);
 
+
+  .checkout-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
   .checkout-container {
     overflow-y: auto;
+    display: grid;
+    gap: 1rem;
+    max-height: 608px;
+    overflow-y: auto;
+
+    p {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: gray;
+    }
   }
 }
 
 .checkout-icon {
   height: 5rem;
   width: auto;
+  padding-right: 1rem;
 }
 
 .checkout-animate {
   transform: translateX(0);
+}
+
+.checkout-box {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  padding-bottom: 1rem;
+  border-bottom: 0.5px solid black;
+
+  * {
+    margin: 0;
+  }
+
+  .quantity-switch {
+    display: grid;
+    align-items: center;
+    margin: 0;
+    height: 1.7rem;
+      align-self: start;
+    justify-content: center;
+    grid-auto-flow: column;
+    font-size: 1.25rem;
+    color: #6366f1;
+    font-weight: 800;
+    gap: 8px;
+
+    button {
+      border: none;
+      background-color: none;
+      background: none;
+    }
+
+    .utils-icon img {
+      height: 1.1rem;
+      width: auto;
+      cursor: pointer;
+    }
+  }
+
+  .checkout-icon {
+    grid-row: 1 / -1;
+    height: 60px;
+    width: auto;
+    align-self: center;
+  }
+
+  .price {
+    font-size: 1rem;
+    font-weight: 300;
+    align-self: center;
+  }
+
+  .product-name {
+    font-size: 1.25rem;
+    font-weight: 500;
+    grid-column: 2 / -1;
+    align-self: end;
+  }
+  
+}
+
+.checkout-box:last-of-type {
+  border-bottom: none;
+}
+
+.subtotal {
+  border-top: 1px solid black;
+}
+
+.total {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  p {
+    padding-left: 1rem;
+  }
+
+  .total-cost {
+    padding-right: 2.5rem;
+    justify-self: end;
+    font-size: 1.1rem;
+  }
+
+  .true-total-cost, .total-title {
+    align-self: center;
+    font-size: 1.25rem;
+    margin: 0;
+    font-weight: 500;
+    color: #6366f1;
+  }
+  .total-title {
+    font-weight: 700;
+  }
+}
+
+.true-total {
+  border: 2px solid #6366f1;
+  display: grid;
+  align-items: center;
+  padding: 1rem 0;
 }
