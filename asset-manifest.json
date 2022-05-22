@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/uncm-apparel-page/static/css/main.4775699e.css",
-    "main.js": "/uncm-apparel-page/static/js/main.de1c6eee.js",
+    "main.js": "/uncm-apparel-page/static/js/main.18d98da0.js",
     "static/js/787.d6fe38e8.chunk.js": "/uncm-apparel-page/static/js/787.d6fe38e8.chunk.js",
     "static/media/uncm-header-vid.mp4": "/uncm-apparel-page/static/media/uncm-header-vid.bc66e1cda23a379b07d5.mp4",
     "static/media/uncm-logo.png": "/uncm-apparel-page/static/media/uncm-logo.958c5852a0c6c6922896.png",
@@ -16,11 +16,11 @@
     "static/media/plus.svg": "/uncm-apparel-page/static/media/plus.f48bf0f7053189de17915ba0ff71eefd.svg",
     "static/media/minus.svg": "/uncm-apparel-page/static/media/minus.686d0e9d4005d913b138af19533d99c6.svg",
     "main.4775699e.css.map": "/uncm-apparel-page/static/css/main.4775699e.css.map",
-    "main.de1c6eee.js.map": "/uncm-apparel-page/static/js/main.de1c6eee.js.map",
+    "main.18d98da0.js.map": "/uncm-apparel-page/static/js/main.18d98da0.js.map",
     "787.d6fe38e8.chunk.js.map": "/uncm-apparel-page/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4775699e.css",
-    "static/js/main.de1c6eee.js"
+    "static/js/main.18d98da0.js"
   ]
 }
