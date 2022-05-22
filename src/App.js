@@ -1,5 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState, useEffect } from 'react';
+import { HashRouter, Routes, Route } from "react-router-dom";
+import { useState } from 'react';
 import 'normalize.css';
 import Layout from "./components/Layout";
 import Main from "./components/Main";
@@ -137,7 +137,7 @@ const App = () => {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<Layout carts={carts} status={openCart} utils={{utils, changeCartStatus}}/>}>
           <Route index element={<Main />} />
@@ -149,7 +149,7 @@ const App = () => {
           </Route>
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
