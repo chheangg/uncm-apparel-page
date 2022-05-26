@@ -13,7 +13,6 @@ const Checkout = ({carts, utils}) => {
 
   const getTotal = (carts) => {
     return carts.reduce((prev, next) => {
-      console.log(prev.quantity)
       return prev + parseInt(next.price) * parseInt(next.quantity)
     }, 0)
   }

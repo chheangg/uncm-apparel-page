@@ -3,17 +3,34 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 780px;
+  max-width: 100vw;
+  overflow: hidden;
+  min-height: 100vh;
 
   .video-container {
     position: absolute;
-    width: 100vw;
-    overflow: hidden;
+    left: 0;
+    right: 0;
+    max-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
     filter: brightness(45%);
   }
 
   video {
+    max-width: 100vw;
+    overflow: hidden;
     margin-top: -4px;
+  }
+
+  .video-container::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: linear-gradient(to bottom, transparent 0%,#4c1d95 80%);
   }
 
   p {
@@ -37,7 +54,7 @@
     text-decoration: none;
     color: white;
     background-color: #6366f1;
-    margin-bottom: 20vh;
+    margin-bottom: 5vh;
     transition: 200ms ease-out;
   }
 }

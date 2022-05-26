@@ -1,16 +1,21 @@
 .nav-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  top: 0;
+  position: sticky;
   align-items: center;
   justify-content: center;
   justify-items: center;
   background-color: #6366f1;
   text-decoration: none;
-  z-index: 1;
+  z-index: 5;
   margin: 0;
   box-shadow: 0 4px 4px 0 gray;
   border-radius: 0;
   padding: 0 10vw;
+  position: sticky;
+  left: 0;
+  right: 0;
 
   .logo {
     height: 5rem;
@@ -77,4 +82,18 @@
       }
     }
   }
+}
+
+.transparent {
+  position: fixed;
+  transition: 200ms ease-out;
+  box-shadow: none;
+  background: none;
+  background-color: none;
+}
+
+.retain {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  position: fixed;
+  transition: 100ms ease-out;
 }

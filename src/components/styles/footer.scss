@@ -1,0 +1,37 @@
+.footer-container {
+  background-color: #111827;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.25rem;
+  margin: 0;
+  position: relative;
+  align-items: center;
+  font-weight: 300;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  p:first-of-type a:first-of-type {
+    font-weight: 500;
+    text-decoration: none;
+    color: #6366f1;
+  }
+
+  p {
+
+    a {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    color: white;
+  }
+}

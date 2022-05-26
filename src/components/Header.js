@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Shop from "./utils/Shop";
 import headerVid from './assets/uncm-header-vid.mp4';
 import './styles/header.scss';
 
@@ -11,9 +11,7 @@ const Header = () => {
         </video>
       </div>
       <p>GOATED APPAREL IN PP</p>
-      <div className='btn-wrapper'>
-        <Link to='/category/featured'>SHOP NOW</Link>
-      </div>
+      <Shop type='featured' />
     </div>
   )
 }

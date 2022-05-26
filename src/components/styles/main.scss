@@ -8,8 +8,111 @@ body {
   background-color: #e5e7eb;
 }
 
+
+.layout-container {
+  min-height: 100vh;
+}
+
 .icon {
   filter:  brightness(0) invert(1);
   height: 2rem;
   width: auto;
+}
+
+.btn-wrapper {
+  z-index: 2;
+  display: flex;
+  a {
+    z-index: 2;
+    font-size: 4ch;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    background-color: #6366f1;
+    margin-bottom: 20vh;
+    transition: 200ms ease-out;
+  }
+
+  a:hover {
+    transform: translateY(-0.5rem);
+    color: #6366f1;
+    background-color: white;
+  }
+}
+
+.main-container {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.statement-container {
+  height: 80vh;
+  margin-top: -1rem;
+  padding: 5vh 12.5vw;
+
+  h1 {
+    color: #6366f1;
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+}
+
+.shirt-container {
+  margin-top: -6px;
+  background-image: url('../assets/Sinn_Sisamouth.png');
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding-left: 25vw;
+  gap: 10vw;
+  background-size: contain;
+  position: relative;
+  z-index: 3;
+  width: 100vw;
+  height: 500px;
+
+  .featured-shirt-container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    h1 {
+      padding-top: 2rem;
+      grid-column: 1 / -1;
+      color: #212123;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid gray;
+      font-size: 4rem;
+      margin: 0;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    img:first-of-type {
+      margin-right: 3rem;
+    }
+
+    img {
+      margin-top: -2rem;
+      width: 20vw;
+      height: auto;
+    }
+  }
+
+  .btn-wrapper a {
+    margin: 0;
+    background: none;
+    border: 1px solid white;
+  }
+
+  .btn-wrapper a:hover {
+    border: 1px solid #6366f1;
+  }
 }

@@ -17,7 +17,6 @@ const Category = ({type, products, utils, carts}) => {
     else {
       filtered = products.filter(product => {
         if (product.featured && product.featured === true) {
-          console.log(product)
           return product
         }
       }).map(product => {
