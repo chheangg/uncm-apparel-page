@@ -1,6 +1,9 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was made with ReactJS, Scss and magics! A project that was meant for both The Odin Project and UNCM!
+
+Check [UNCM](https://instagram.com/un._.cm) out! They are a lovely apparel brand based in Phnom Penh that serves its fans high quality tees with outstanding and unique designs.
+
 
 ## Available Scripts
 
