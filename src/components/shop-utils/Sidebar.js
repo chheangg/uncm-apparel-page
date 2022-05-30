@@ -7,9 +7,10 @@ const Sidebar = () => {
     <aside className='sidebar-container'>
       <h1 className='title'>Categories</h1>
       <Link to='featured'><img className='icon' src={icon} alt='featured'></img>Featured</Link>
+      <Link to='apparels'><img className='icon' src={icon} alt='apparels'></img>Apparels</Link>
       <Link to='shirts'><img className='icon' src={icon} alt='shirts'></img>Shirts</Link>
-      <Link to='pants'><img className='icon' src={icon} alt='pants'></img>Pants</Link>
-      <Link to='shoes'><img className='icon' src={icon} alt='sneakers'></img>Sneakers</Link>
+      <Link to='shorts'><img className='icon' src={icon} alt='pants'></img>Shorts</Link>
+      <Link to='accessories'><img className='icon' src={icon} alt='pants'></img>Accessories</Link>
     </aside>
   )
 }

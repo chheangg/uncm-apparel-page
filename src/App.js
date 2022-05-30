@@ -6,76 +6,11 @@ import Main from "./components/Main";
 import Categories from "./components/shop-utils/Categories";
 import Category from "./components/shop-utils/Category";
 import './components/styles/main.scss';
-import defaultImg from './components/assets/tshirt-crew.svg'
-const uncmList = [
-  {
-    name: 'simple shirt',
-    price: 12,
-    type: 'shirts',
-  },
-  {
-    name: 'air fock one',
-    price: 12,
-    type: 'shoes',
-    featured: true,
-  },
-  {
-    name: 'jersey pants',
-    price: 12,
-    type: 'pants',
-    featured: true,
-  },
-  {
-    name: 'polo',
-    price: 12,
-    type: 'shirts',
-  },
-  {
-    name: 'menlay\'s shirt',
-    price: 12,
-    type: 'shirts',
-  },
-  {
-    name: 'simple pants',
-    price: 12,
-    type: 'pants',
-  },
-  {
-    name: 'Air Menlay One',
-    price: 12,
-    type: 'shoes',
-  },
-]
+import productsList from "./components/config";
 
-const ordered = [
-  {
-    name: 'simple shirt',
-    price: 12,
-    quantity: '2',
-    img: defaultImg,
-  },
-  {
-    name: 'simple pants',
-    price: 12,
-    quantity: '3',
-    img: defaultImg,
-  },
-  {
-    name: 'Air Menlay One',
-    price: 12,
-    quantity: 1,
-    img: defaultImg,
-  },
-  {
-    name: 'menlay\'s shirt',
-    price: 12,
-    quantity: '2',
-    img: defaultImg,
-  },
-]
 const App = () => {
-  const [products] = useState(uncmList);
-  const [carts, setCarts] = useState(ordered)
+  const [products] = useState(productsList);
+  const [carts, setCarts] = useState([])
   const [ openCart, setOpenCart ] = useState(false);
 
   const changeCartStatus = () => {
@@ -143,9 +78,10 @@ const App = () => {
           <Route index element={<Main />} />
           <Route path='category' element={<Categories />}>
             <Route path='featured' element={<Category type='featured' carts={carts} products={products} utils={utils} />} />
+            <Route path='apparels' element={<Category type='apparels' carts={carts} products={products} utils={utils} />} />
             <Route path='shirts' element={<Category type='shirts' carts={carts} products={products} utils={utils} />} />
-            <Route path='pants' element={<Category type='pants' carts={carts} products={products} utils={utils} />} />
-            <Route path='shoes' element={<Category type='shoes' carts={carts} products={products} utils={utils} />} />
+            <Route path='shorts' element={<Category type='shorts' carts={carts} products={products} utils={utils} />} />
+            <Route path='accessories' element={<Category type='accessories' carts={carts} products={products} utils={utils} />} />
           </Route>
         </Route>
       </Routes>
